@@ -1,20 +1,25 @@
 <script>
 import { store } from '../store';
-    export default {
-        data() {
-            return {
-                store
-            }
-        },
-        
-    }
+import card from './AppCardElement.vue';
+export default {
+    components: {
+        card
+    },
+    data() {
+        return {
+            store
+        }
+    },
+
+}
 </script>
 
 <template>
-   <div>aaaa</div>
+    <div v-for="card in store.card">
+        <card :img="card.card_images.image_url" :name="card.name" :type="card.type" />
+    </div>
 </template>
 
 
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
