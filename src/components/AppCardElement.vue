@@ -13,8 +13,8 @@
 <template>
     <article class="text-center">   
         <div class="img"><img class="img-fluid" :src="img"></div>
-        <h3>{{  name }}</h3>
-        <div>{{ type}}</div>
+        <h5>{{  name }}</h5>
+        <div>{{ type }}</div>
     </article>
 </template>
 
