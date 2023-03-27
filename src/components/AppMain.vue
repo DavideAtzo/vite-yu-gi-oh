@@ -1,8 +1,10 @@
 <script>
 import AppSelectMain from './AppSelectMain.vue';
+import AppCardList from './AppCardList.vue';
     export default {
         components:{
-            AppSelectMain
+            AppSelectMain,
+            AppCardList
         }
     }
 </script>
@@ -11,6 +13,7 @@ import AppSelectMain from './AppSelectMain.vue';
 <template>
    <main>
     <AppSelectMain />
+    <AppCardList />
    </main>
 </template>
 
