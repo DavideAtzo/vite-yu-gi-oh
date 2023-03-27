@@ -45,7 +45,7 @@ export default {
     .foundCards {
         
         color: white;
-        padding: 0 10px;
+        padding: 0 20px;
         div{
             background-color: $foundColor;
             padding: 30px 20px;

@@ -11,7 +11,7 @@ export default {
 
 <template>
     <div class="img"><img class="img-fluid" :src="img"></div>
-    <div class="text-box pt-2 d-flex justify-content-between flex-column">
+    <div class="text-box mx-2 pt-2 d-flex justify-content-between flex-column">
         <h6>{{ name }}</h6>
         <div class="d-flex justify-content-center align-items-baseline">{{ type }}</div>
     </div>
