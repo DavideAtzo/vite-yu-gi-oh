@@ -1,13 +1,16 @@
 <script>
+import AppSelectMain from './AppSelectMain.vue';
     export default {
-        
+        components:{
+            AppSelectMain
+        }
     }
 </script>
 
 
 <template>
    <main>
-    
+    <AppSelectMain />
    </main>
 </template>
 
