@@ -24,6 +24,5 @@ export default {
 
 main {
     background-color: $primary;
-    height: calc(100vh - 100px);
 }
 </style>

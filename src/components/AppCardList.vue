@@ -20,15 +20,17 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <div class="row ">
-            <div v-for="card in cards.slice(0,20)">
+    <div class="container py-5">
+        <div class="row mx-5">
+            <article class="col-3 mb-4 text-center" v-for="card in cards.slice(0, 20)">
                 <card :img="card.card_images[0].image_url" :name="card.name" :type="card.type" />
-            </div>
+            </article>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-
+.container{
+    background-color: white;
+}
 </style>
