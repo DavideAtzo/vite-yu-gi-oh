@@ -16,7 +16,7 @@ export default {
 
 <template>
     <div v-for="card in store.card">
-        <card :img="card.card_images.image_url" :name="card.name" :type="card.type" />
+        <card :img="card.card_images[0].image_url" :name="card.name" :type="card.type" />
     </div>
 </template>
 
