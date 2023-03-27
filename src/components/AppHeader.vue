@@ -10,7 +10,7 @@ export default {
             <div id="section-title" class="row align-items-center">
                 <div class="col-auto"><img src="/img/logo-Yu-Gi-Oh.png" alt=""></div>
                 <div class="col-auto">
-                    <h1>Yu-GiOh Api</h1>
+                    <h1>Yu-Gi-Oh Api</h1>
                 </div>
             </div>
         </div>

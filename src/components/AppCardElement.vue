@@ -9,10 +9,9 @@ export default {
 }
 </script>
 
-
 <template>
     <div class="img"><img class="img-fluid" :src="img"></div>
-    <div class="text-box mx-3 pt-2 d-flex justify-content-between flex-column">
+    <div class="text-box pt-2 d-flex justify-content-between flex-column">
         <h6>{{ name }}</h6>
         <div class="d-flex justify-content-center align-items-baseline">{{ type }}</div>
     </div>
@@ -35,9 +34,6 @@ img {
         font-weight: 600;
         text-transform: uppercase;
         color: white;
-    }
-    div{
-        // padding-bottom: 15px;
     }
 }
 </style>
