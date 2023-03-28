@@ -1,5 +1,5 @@
 <script>
-import axios from 'axios';
+import { store } from '../store';
 import card from './AppCardElement.vue';
 export default {
     components: {
@@ -7,15 +7,16 @@ export default {
     },
     data() {
         return {
-            cards: []
+            // cards: []
+            store
         }
     },
-    created() {
-        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
-            .then((response) => {
-                this.cards = response.data.data;
-            })
-    }
+    // created() {
+    //     axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
+    //         .then((response) => {
+    //             this.cards = response.data.data;
+    //         })
+    // }
 }
 </script>
 
@@ -27,7 +28,7 @@ export default {
                     Found 39 cards
                 </div>
             </div>
-            <article class="mb-4 text-center" v-for="card in cards.slice(0, 39)">
+            <article class="mb-4 text-center" v-for="card in store.cards.slice(0,39)">
                 <card :img="card.card_images[0].image_url" :name="card.name" :type="card.type" />
             </article>
         </div>
