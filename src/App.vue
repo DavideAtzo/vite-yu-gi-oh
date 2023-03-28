@@ -15,19 +15,22 @@ export default {
   },
   methods: {
     search(){
-      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
+      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php',
+      {params: {
+        archetype: store.searchArchetype
+      }})
       .then((response) => {
         console.log(response);
         this.store.cards = response.data.data;
-      }),
-      axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
-        .then((response) => {
-          this.store.archetypes = response.data;
-        })
+      })      
     }
   },
   created() {
-    this.search();
+    this.search()
+    axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+      .then((response) => {
+        this.store.archetypes = response.data;
+      })
   }
 }
 </script> 

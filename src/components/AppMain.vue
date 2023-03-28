@@ -8,7 +8,6 @@ export default {
     },
     methods: {
         handleSearch() {
-            console.log('ho ascoltato questo evento');
             this.$emit('select');
         }
     }
