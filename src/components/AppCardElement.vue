@@ -4,7 +4,7 @@ export default {
     props: {
         img: String,
         name: String,
-        type: String,
+        archetype: String,
     }
 }
 </script>
@@ -13,7 +13,7 @@ export default {
     <div class="img"><img class="img-fluid" :src="img"></div>
     <div class="text-box mx-2 pt-2 d-flex justify-content-between flex-column">
         <h6>{{ name }}</h6>
-        <div class="d-flex justify-content-center align-items-baseline">{{ type }}</div>
+        <div class="d-flex justify-content-center align-items-baseline">{{ archetype }}</div>
     </div>
 </template>
 
