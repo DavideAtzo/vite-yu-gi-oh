@@ -18,7 +18,7 @@ export default {
         <div class="row mx-5">
             <div class="foundCards">
                 <div>
-                    Found 39 cards
+                    Found "{{ store.foundCards }}" cards
                 </div>
             </div>
             <article class="mb-4 text-center" v-for="card in store.cards.slice(0,39)">

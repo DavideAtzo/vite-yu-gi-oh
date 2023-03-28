@@ -22,6 +22,7 @@ export default {
       .then((response) => {
         console.log(response);
         this.store.cards = response.data.data;
+        this.store.foundCards = response.data.data.length;
       })      
     }
   },
