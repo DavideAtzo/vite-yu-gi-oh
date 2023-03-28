@@ -7,16 +7,9 @@ export default {
     },
     data() {
         return {
-            // cards: []
             store
         }
     },
-    // created() {
-    //     axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
-    //         .then((response) => {
-    //             this.cards = response.data.data;
-    //         })
-    // }
 }
 </script>
 
@@ -29,7 +22,7 @@ export default {
                 </div>
             </div>
             <article class="mb-4 text-center" v-for="card in store.cards.slice(0,39)">
-                <card :img="card.card_images[0].image_url" :name="card.name" :type="card.type" />
+                <card :img="card.card_images[0].image_url" :name="card.name" :archetype="card.archetype" />
             </article>
         </div>
     </div>
