@@ -5,6 +5,12 @@ export default {
     components: {
         AppSelectMain,
         AppCardList
+    },
+    methods: {
+        handleSearch() {
+            console.log('ho ascoltato questo evento');
+            this.$emit('select');
+        }
     }
 }
 </script>
@@ -12,7 +18,7 @@ export default {
 
 <template>
     <main>
-        <AppSelectMain />
+        <AppSelectMain @selectInput="handleSearch"/>
         <AppCardList />
     </main>
 </template>

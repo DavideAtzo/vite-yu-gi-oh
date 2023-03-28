@@ -13,7 +13,7 @@ export default {
 <template>
     <div class="container">
         <div class="row">
-            <select class="w-25 form-select mx-5 my-4">
+            <select class="w-25 form-select mx-5 my-4" v-model="store.searchArchetype" @change.prevent="$emit('selectInput')">
                 <option selected>Selection type...</option>
                 <option v-for="archetype in store.archetypes">{{ archetype.archetype_name }}</option>
             </select>

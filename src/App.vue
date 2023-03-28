@@ -13,24 +13,28 @@ export default {
       store
     }
   },
-  created() {
-    axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
+  methods: {
+    search(){
+      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
       .then((response) => {
         console.log(response);
         this.store.cards = response.data.data;
       }),
       axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
         .then((response) => {
-          console.log(response);
           this.store.archetypes = response.data;
         })
+    }
+  },
+  created() {
+    this.search();
   }
 }
 </script> 
 
 <template>
   <AppHeader />
-  <AppMain />
+  <AppMain @select="search"/>
 </template>
 
 
