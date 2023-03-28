@@ -15,7 +15,7 @@ export default {
         <div class="row">
             <select class="w-25 form-select mx-5 my-4">
                 <option selected>Selection type...</option>
-                <option v-for="archetype in store.cards.slice(0,39)" value="alien">{{ archetype.archetype}}</option>
+                <option v-for="archetype in store.archetypes">{{ archetype.archetype_name }}</option>
             </select>
         </div>
     </div>
