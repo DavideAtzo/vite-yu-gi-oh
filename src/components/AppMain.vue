@@ -26,7 +26,6 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/variables/variables.scss' as *;
-
 main {
     background-color: $primary;
 }
